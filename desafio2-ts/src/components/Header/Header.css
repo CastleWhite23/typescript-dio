@@ -1,0 +1,14 @@
+.header {
+    height: 50px;
+    background-color: rgb(98, 0, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .logo{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
