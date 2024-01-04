@@ -34,5 +34,6 @@ describe('UserController', () => {
         userController.createUser(mockRequest, mockResponse)
 
         expect(mockResponse.state.status).toBe(400)
+        expect(mockResponse.state.json).toMatchObject({ message: "Bad request! Name obrigatório"})
     })
 })
