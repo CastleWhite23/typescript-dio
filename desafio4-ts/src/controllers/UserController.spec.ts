@@ -22,4 +22,17 @@ describe('UserController', () => {
         expect(mockResponse.state.status).toBe(201)
         expect(mockResponse.state.json).toMatchObject({ message: 'Usuário criado' })
     })
+
+    it('Verificar a resposta de erro caso o usuário não informe o name', ()=>{
+        const mockRequest = {
+            body:{
+                email: 'pedro@email'
+            }
+        } as Request
+
+        const mockResponse = makeMockResponse()
+        userController.createUser(mockRequest, mockResponse)
+
+        expect(mockResponse.state.status).toBe(400)
+    })
 })
