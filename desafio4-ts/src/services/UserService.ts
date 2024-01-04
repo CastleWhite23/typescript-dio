@@ -32,5 +32,11 @@ export class UserService {
     getAllUsers = () => {
         return this.db
     }
+
+    delete = () => {
+        this.db.pop()
+        console.log('DB atualizado')
+        return {message: 'Usuario deletado'}
+    }
 }
 
