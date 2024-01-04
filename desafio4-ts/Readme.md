@@ -20,7 +20,7 @@ desenvolvido por [Nathally Souza](https://github.com/nathyts)
 
 #### Desafios
 [ ] Incluir os testes unitários pendentes no controller
-  - Verificar a resposta de erro caso o usuário não informe o name
+  - Verificar a resposta de erro caso o usuário não informe o name OK
   - Verificar se a função getAllusers está sendo chamada
 
 [ ] Implementa uma validação para o campo email
