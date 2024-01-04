@@ -6,7 +6,8 @@ import { makeMockResponse } from "../__mocks__/mockResponse.mock";
 describe('UserController', () => {
     const mockUserService: Partial<UserService> = {
         createUser: jest.fn(),
-        getAllUsers: jest.fn()
+        getAllUsers: jest.fn(),
+        delete: jest.fn()
     }
     
     const userController = new UserController(mockUserService as UserService);
@@ -58,6 +59,16 @@ describe('UserController', () => {
         userController.getAllUsers(mockRequest, mockResponse)
 
         expect(mockResponse.state.status).toBe(200)
+
+    })
+
+    it('Excluir usuarios', ()=>{
+        const mockRequest = {} as Request
+        const mockResponse = makeMockResponse()
+        userController.delete(mockRequest, mockResponse)
+
+        expect(mockResponse.state.status).toBe(200)
+        expect(mockResponse.state.json).toMatchObject({ message: 'Usuário deletado' })
 
     })
 })
